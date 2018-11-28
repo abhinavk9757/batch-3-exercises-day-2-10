@@ -1,7 +1,7 @@
 
 function applyOperator() {
 
-  if(arguments.length === 1)
+  if(arguments.length <= 1)
   return 0;
   
   if(arguments.length === 2)
@@ -11,7 +11,7 @@ function applyOperator() {
   switch (arguments[0]){
     case '+':
       for(var i = 1; i<arguments.length;i++)
-        var result = result + arguments[i];
+        result = result + arguments[i];
       break;
 
     case '-':

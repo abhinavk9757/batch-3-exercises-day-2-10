@@ -9,7 +9,7 @@ describe('counter', () => {
   });
   it('should increment and return the number each time the function is invoked', () => {
     const counterFunction = counter();
-   // expect(counterFunction()).toBe(1);
+    expect(counterFunction()).toBe(1);
     expect(counterFunction()).toBe(2);
     expect(counterFunction()).toBe(3);
     expect(counterFunction()).toBe(4);

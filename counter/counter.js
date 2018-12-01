@@ -1,11 +1,9 @@
-var a =0;
-
 function counter() {
-  if(arguments.length===0)
-  return ()=> a=a+1;
-
+  let a = 0;
+  return () => {
+    a += 1;
+    return a;
+  };
 }
 
-export {
-  counter,
-};
+export { counter };

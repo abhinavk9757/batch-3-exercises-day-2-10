@@ -1,13 +1,17 @@
-var increment =0;
-var decrement =0;
+let increment = 0;
+let decrement = 0;
 
 function counterFactory() {
   return {
-    increment : ()=>increment = increment+1,
-    decrement : ()=>decrement = decrement-1
+    increment: () => {
+      increment += 1;
+      return increment;
+    },
+    decrement: () => {
+      decrement -= 1;
+      return decrement;
+    },
   };
 }
 
-export {
-  counterFactory,
-};
+export { counterFactory };

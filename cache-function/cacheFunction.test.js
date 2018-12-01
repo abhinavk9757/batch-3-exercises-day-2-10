@@ -6,7 +6,7 @@ describe('cacheFunction', () => {
   });
   it('The cached function should return the correct result', () => {
     const foo = x => (x * x);
-    const cachedFunction = (a)=>{cacheFunction(foo,a)};
+    const cachedFunction = cacheFunction(foo);
     expect(cachedFunction(5)).toBe(25);
   });
   it('should cache function results and not rerun the original callback if the same arguments are presented', () => {

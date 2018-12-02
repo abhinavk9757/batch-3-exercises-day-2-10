@@ -1,29 +1,15 @@
-
-function isPalindrome(arrr) {
-  arrr = arrr.toLowerCase();
-  var arr = new Array();
-  for(var i=0;i<arrr.length;i++)
-    arr.push(arrr[i])
-
-  for(i =0;;i++){
-    if(i>= arr.length)
-    break;
-
-    if(arr[i]=== '-' || arr[i]=== '_' || arr[i]=== ' ' || arr[i]=== ',' || arr[i]=== '/'){
-      arr.splice(i,1);
-    }
-  }
-
-
-  for(i=0;i<=arr.length;i++){
-    if(arr[i] != arr[arr.length-i-1])
-    return false;
-  }
-
+function checkPalindrome(arr) {
+  const len = arr.length;
+  for (let i = 0; i <= len / 2; i += 1) if (arr[i] !== arr[len - i - 1]) return false;
   return true;
-  
+}
+function isPalindrome(arrr) {
+  const arr = arrr
+    .toString()
+    .toLowerCase()
+    .replace(/([^a-z0-9]+)/gi, '')
+    .split('');
+  return checkPalindrome(arr);
 }
 
-export {
-  isPalindrome,
-};
+export { isPalindrome };

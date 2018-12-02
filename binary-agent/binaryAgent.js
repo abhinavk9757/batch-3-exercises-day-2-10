@@ -1,8 +1,13 @@
+function binaryAgent(args) {
+  const individualBinary = args.split(' ');
+  let mappedBinary = individualBinary.map((element) => {
+    const val = String.fromCharCode(parseInt(element, 2));
+    return val;
+  });
 
-function binaryAgent(...args) {
-  return args;
+  mappedBinary = mappedBinary.reduce((acc, value) => (acc + value));
+
+  return mappedBinary;
 }
 
-export {
-  binaryAgent,
-};
+export { binaryAgent };
